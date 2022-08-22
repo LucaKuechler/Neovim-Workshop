@@ -20,10 +20,8 @@ require("config.project")
 -- LSP Config
 require("lsp.lsp-config")
 require("lsp.lsp-python")
-require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
-require("lsp.lsp-php")
 
 -- Linter
 require("linter.test")
@@ -33,9 +31,3 @@ require("formatter.test")
 
 -- Git
 require("git.gitsigns")
-
--- Debugger
-require("debugger.debugger")
-require("debugger.ui")
-require("debugger.python")
-require("debugger.go")
