@@ -49,11 +49,11 @@
 
 ## 5. Working with Neovim
 ### 5.1 Working with the file explorer
-    * With in neovim press `SPACE e`. You need to press them both at the same time, but SPACE must be one milisecond faster. Otherwise the order will be `e SPACE` which is wrong.
-    * A new window split should be opened.
-        ![tree](./images/tree.png)
-    * In the previous picture you can spot a white bar in the left top corner. That shows you are focusing the file explorer window. Which is needed. If this is not the case you can click with your mouse inside the tree window. 
-    * With the keys you can navigate up and down.
-        * j -> down
-        * k -> up
-    * To open a file simply press v (vertical split) with the cursor on that specific file.
+* With in neovim press `SPACE e`. You need to press them both at the same time, but SPACE must be one milisecond faster. Otherwise the order will be `e SPACE` which is wrong.
+* A new window split should be opened.
+    ![tree](./images/tree.png)
+* In the previous picture you can spot a white bar in the left top corner. That shows you are focusing the file explorer window. Which is needed. If this is not the case you can click with your mouse inside the tree window. 
+* With the keys you can navigate up and down.
+    * j -> down
+    * k -> up
+* To open a file simply press v (vertical split) with the cursor on that specific file.
