@@ -1,5 +1,10 @@
 # Neovim Workshop
 
+## 0. Get the perfect font (not required)
+1. Download the font [Click me](https://github.com/pyrho/hack-font-ligature-nerd-font/blob/master/font/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+2. Open the file and click install
+3. Open your Terminal and change font to `Hack Nerd Font Mono`
+
 ## 1. Get on the system
 1. Groups of 2
 2. Login credentials are written on the paper in front of you. (Please don't move them)
@@ -83,7 +88,9 @@
 * `SPACE g` -> open file search field
 
 ### 5.7 Language server features
-
+* Because the language Server has been installed after you open your nvim the last time, please re open the app.py file:
+	1. Type `:qa!` to exit neovim
+	2. open neovim again by typing `nvim ~/code/app.py`
 #### 5.7.1 Go to definition
 * Click or move to a function call (use a function that is written by me)
     ![func](./images/func.png)

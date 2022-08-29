@@ -63,10 +63,10 @@ ENV HOME /home/ordix
 # INSTALL NEOVIM AND TMUX CONFIG
 COPY ./.tmux.conf /home/ordix/.tmux.conf
 COPY ./nvim /home/ordix/.config/nvim
-RUN chown -R ordix /home/ordix/
 
 # MOVE SOURCE CODE IN
 COPY ./code /home/ordix/code
+RUN chown -R ordix /home/ordix/
 
 # SETUP UP TERMINAL STYLING
 ENV TERM xterm-256color
