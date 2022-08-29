@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get install -y unzip \
                        pip \
-		       openssh-server \
+        		       openssh-server \
                        curl \
                        wget \
                        tmux \
