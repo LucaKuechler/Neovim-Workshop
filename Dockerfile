@@ -1,9 +1,8 @@
 FROM debian:latest
 
-RUN apt-get -y update && apt-get -y upgrade
-
-RUN apt-get install -y unzip \
+RUN apt-get -y update && apt-get -y upgrade && apt-get install -y unzip \
                        pip \
+		       openssh-server \
                        curl \
                        wget \
                        tmux \
@@ -32,7 +31,15 @@ RUN sudo apt install -y nodejs
 # INSTALL NEOVIM
 COPY ./neovim /neovim
 RUN cd /neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
-# RUN make install
+
+# OPEN SSH CONFIG
+RUN mkdir /var/run/sshd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+RUN ssh-keygen -A
+COPY ./start.sh /usr/bin/start.sh
+RUN chmod 755 /usr/bin/start.sh
+EXPOSE 22
 
 # INSTALL LOCALES
 RUN apt-get install -y locales && \
@@ -47,14 +54,16 @@ RUN chsh -s /usr/sbin/nologin root
 
 # CREATE USER
 RUN groupadd -r ordix && useradd -m -r -g ordix ordix
-RUN echo 'ordix:ordix' | chpasswd
-USER ordix 
+RUN echo 'ordix:$ordix123456' | chpasswd
+RUN sed -Ei 's|(ordix.*)/bin/sh|\1/bin/bash|g' /etc/passwd
+
 WORKDIR /home/ordix
 ENV HOME /home/ordix
 
 # INSTALL NEOVIM AND TMUX CONFIG
 COPY ./.tmux.conf /home/ordix/.tmux.conf
 COPY ./nvim /home/ordix/.config/nvim
+RUN chown -R ordix /home/ordix/
 
 # MOVE SOURCE CODE IN
 COPY ./code /home/ordix/code
@@ -63,4 +72,8 @@ COPY ./code /home/ordix/code
 ENV TERM xterm-256color
 ENV LC_ALL de_DE.utf-8
 
-CMD ["tail", "-f", "/dev/null"]
+
+CMD ["/usr/bin/start.sh"]
+
+# CHANGE USER
+# USER ordix 
