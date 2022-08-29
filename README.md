@@ -57,3 +57,44 @@
     * j -> down
     * k -> up
 * To open a file simply press v (vertical split) with the cursor on that specific file.
+    * ⚠ if you split the file app.py nothing will happen because it is already opened.
+
+* To close the file explorer just do `SPACE e` again.
+
+* The file tree can do a lot more. Copy, rename, delete, create a file and even move throught your entire file system. Also horizontal splits are possible. If you wan't to learn more you can visit [Dotfiles](https://github.com/LucaKuechler/Dotfiles/blob/master/cheat/.config/cheat/nvim/nvim_tree)
+
+### 5.2 Move throught the window splits
+* `gl` -> go into right split
+* `gh` -> go into left split
+* `gj` -> go one split down (needs at least one horizontal split)
+* `gh` -> go one split up (needs at least one horizontal split)
+
+### 5.3 Resize Splits
+* `STRG l` -> decrease focused window size
+* `STRG h` -> increase focused window size
+
+### 5.4 Close Split
+* `STRG w` -> close current focused split
+
+### 5.5 Search files in the current workspace
+* `SPACE SPACE` -> open file search field
+
+### 5.6 Search words in the current workspace
+* `SPACE g` -> open file search field
+
+### 5.7 Language server features
+
+#### 5.7.1 Go to definition
+* Click or move to a function call (use a function that is written by me)
+    ![func](./images/func.png)
+* Press `gd` -> goto definition
+
+#### 5.7.1 Rename symbol using the language server
+* Press `SPACE l r` -> this opens a rename window at the bottom of your editor. Choose any name and press enter.
+
+### 5.8 Autocompletion
+1. Go into any line of the code. Press `i` to enter the INSERT mode.
+2. Now type `if __name` and press `STRG n` to select the next option.
+3. Even if the menus still shows you can just press enter.
+
+
