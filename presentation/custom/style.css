@@ -3,3 +3,7 @@
     background-color: #0C4363;
     padding: 20px;
 }
+
+.left-top .title {
+	font-size: 3em !important;
+}

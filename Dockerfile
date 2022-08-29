@@ -56,6 +56,9 @@ ENV HOME /home/ordix
 COPY ./.tmux.conf /home/ordix/.tmux.conf
 COPY ./nvim /home/ordix/.config/nvim
 
+# MOVE SOURCE CODE IN
+COPY ./code /home/ordix/code
+
 # SETUP UP TERMINAL STYLING
 ENV TERM xterm-256color
 ENV LC_ALL de_DE.utf-8

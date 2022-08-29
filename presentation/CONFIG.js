@@ -1,6 +1,6 @@
-const TITLE = "Titel";
-const SPEAKER = "ORDIX Kürzel";
-const PLACE = "ORT";
+const TITLE = "SummerCamp - Build your own Editor.";
+const SPEAKER = "lck";
+const PLACE = "Wiesbaden";
 
 Date.prototype.today = function () {
 	return (
