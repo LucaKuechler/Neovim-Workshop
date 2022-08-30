@@ -97,12 +97,12 @@
     ![func](./images/func.png)
 * Press `gd` -> goto definition
 
-#### 5.7.1 Rename symbol using the language server !use main()
+#### 5.7.2 Rename symbol using the language server
+* Navigate to the function call `main()` in `app.py` and place your cursor on the word.
 * Press `SPACE l r` -> this opens a rename window at the bottom of your editor. Choose any name and press enter.
+    * In a real dev environment the language server would also rename each instance of main() in other files of the project.
 
 ### 5.8 Autocompletion
 1. Go into any line of the code. Press `i` to enter the INSERT mode.
 2. Now type `if __name` and press `STRG n` to select the next option.
 3. Even if the menus still shows you can just press enter.
-
-
