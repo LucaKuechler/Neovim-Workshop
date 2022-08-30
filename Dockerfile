@@ -72,6 +72,8 @@ RUN chown -R ordix /home/ordix/
 ENV TERM xterm-256color
 ENV LC_ALL de_DE.utf-8
 
+# GIT INIT TO MAKE PYTHON CODE A WORKSPACE IN NVIM
+RUN git init /home/ordix/code
 
 CMD ["/usr/bin/start.sh"]
 
