@@ -21,58 +21,58 @@
     ```
 2. Press enter to skip the Warning about the colortheme.
 3. Press `:` on your keyboard. Then type PackerInstall in the opened text input on the left bottom of your screen.
-4. Press Enter. A window split should open up. 
+4. Press Enter. A window split should open up.(Errors are normal)
     ![PackerInstall Window](./images/packerinstall.png)
 5. Wait until the header changes to `packer.nvim - finished in ...`
     * Don't care about the erros. The are fixed automatically when reopening nvim.
-6. To close the window split press `q` on your keyboard.
-7. To leave nvim type `:q`
+6. Close the window split press `q` on your keyboard.
+7. Leave nvim type `:q`
 
 ## 3. Open some code
 1. Enter the following command in your terminal: `nvim ~/code/app.py`
     * Skip the following warning by pressing enter. This will be fixed automatically.
-2. Wait some time till `4/4 Treitter parser for python has been installed`.
+2. Wait some time till `4/4 Treesitter parser for python has been installed`.
 3. Restart nvim with `:q` and `nvim ~/code/app.py`.
     * After restarting syntax highlighting should be applied.
     ![Syntax](./images/syntax.png)
 
 ## 4. General information
-* Normal mode (moving arround like a god mode but not allowed to write)
+* Normal mode (moving arround like a god but not allowed to write)
     * Is active when `NORMAL` is displayed in the statusline at the bottom.
-    * You can allways switch to NORMAL mode pressing: `ESC`
+    * You can always switch to NORMAL mode pressing: `ESC`
 
 * Insert mode (writing like goethe but not allowed to move arround)
     * Is active when `INSERT` is displayed in the statusline at the bottom.
-    * You can allways switch from NORMAL to INSERT mode pressing: `i`
+    * You can always switch from NORMAL to INSERT mode pressing: `i`
     * ⚠ Reminder: `ESC` gets you back to NORMAL mode
 
 * You can move the cursor using the following keys (NORMAL mode only):
-    * h -> left
-    * j -> down
-    * k -> up
-    * l -> right
+    * `h` -> left
+    * `j` -> down
+    * `k` -> up
+    * `l` -> right
 
 ## 5. Working with Neovim
 ### 5.1 Working with the file explorer
 * With in neovim press `SPACE e`. You need to press them both at the same time, but SPACE must be one milisecond faster. Otherwise the order will be `e SPACE` which is wrong.
 * A new window split should be opened.
     ![tree](./images/tree.png)
-* In the previous picture you can spot a white bar in the left top corner. That shows you are focusing the file explorer window. Which is needed. If this is not the case you can click with your mouse inside the tree window. 
+* In the previous picture you can spot a cursor in the left top corner. That shows you are focusing the file explorer window. Which is needed. If this is not the case you can click with your mouse inside the tree window. 
 * With the keys you can navigate up and down.
-    * j -> down
-    * k -> up
-* To open a file simply press v (vertical split) with the cursor on that specific file.
-    * ⚠ if you split the file app.py nothing will happen because it is already opened.
+    * `j` -> down
+    * `k` -> up
+* To open a file simply press `v` (vertical split) with the cursor on that specific file.
+    * ⚠ if you split the file `app.py` nothing will happen because it is already opened.
 
 * To close the file explorer just do `SPACE e` again.
 
-* The file tree can do a lot more. Copy, rename, delete, create a file and even move throught your entire file system. Also horizontal splits are possible. If you wan't to learn more you can visit [Dotfiles](https://github.com/LucaKuechler/Dotfiles/blob/master/cheat/.config/cheat/nvim/nvim_tree)
+* The file tree can do a lot more. Copy, rename, delete, create a file and even move through your entire file system. Also horizontal splits are possible. If you wan't to learn more you can visit [Dotfiles](https://github.com/LucaKuechler/Dotfiles/blob/master/cheat/.config/cheat/nvim/nvim_tree)
 
-### 5.2 Move throught the window splits
+### 5.2 Move through the window splits
 * `gl` -> go into right split
 * `gh` -> go into left split
 * `gj` -> go one split down (needs at least one horizontal split)
-* `gh` -> go one split up (needs at least one horizontal split)
+* `gk` -> go one split up (needs at least one horizontal split)
 
 ### 5.3 Resize Splits
 * `STRG l` -> decrease focused window size
@@ -91,12 +91,13 @@
 * Because the language Server has been installed after you open your nvim the last time, please re open the app.py file:
 	1. Type `:qa!` to exit neovim
 	2. open neovim again by typing `nvim ~/code/app.py`
+
 #### 5.7.1 Go to definition
 * Click or move to a function call (use a function that is written by me)
     ![func](./images/func.png)
 * Press `gd` -> goto definition
 
-#### 5.7.1 Rename symbol using the language server
+#### 5.7.1 Rename symbol using the language server !use main()
 * Press `SPACE l r` -> this opens a rename window at the bottom of your editor. Choose any name and press enter.
 
 ### 5.8 Autocompletion
