@@ -30,6 +30,10 @@
 		<div class="slides">
 			<section id="startpage"></section>
 
+            <section title="">
+                <img src="./custom/reaction.jpg" height="500"> 
+			</section>
+
 			<!-- START CUSTOM SLIDES -->
 			<section data-markdown title="Topics">
 				<div class="centerinside">
@@ -43,7 +47,7 @@
 
             <section title="CHANGES">
 				<div class="newTopicBar">
-					WHY I SWITCHED FROM VSCODE TO NEOVIM 🔎
+					WHY I DECIDED TO USE VIM 🔎
 				</div>
 			</section>
 
@@ -77,17 +81,31 @@
 				<div class="centerinside">
 				<textarea data-template>
                     * Speed
-                        * VSCode 30 Seconds till fully functional
-                        * Neovim 250 Mili Seconds till fully functional
+                        * VSCode 30 Seconds till useable
                     * Configuration
                         * Jump By Word, Jump by Class, ...
                         * Only JSON no logic
                         * Plugins not extensiable
                     * UI
                         * unecessary ui elements that can not be hidden
-                        * no loading time
 				</textarea>
 				</div>
+			</section>
+
+            <section data-markdown title="WHY STILL CHANGE">
+				<div class="centerinside">
+				<textarea data-template>
+                    * Speed
+                        * Neovim 250ms till useable
+                    * Configuration
+                    * UI
+                        * ui elements that have only visual loading time
+				</textarea>
+				</div>
+			</section>
+
+            <section title="How it looks">
+                <img src="./custom/nvim.png"> 
 			</section>
 
             <section title="INTRODUCION &amp; CONFIGURATION">
@@ -162,54 +180,6 @@ require("debugger.go")
                 </pre>
 			</section>
 
-            <section data-auto-animate title="OPEN CONFIG">
-                <pre data-id="code-animation" class="lua">
-                    <code data-trim data-line-numbers="">
-require("plugins")
-require("keymappings")
-require("settings")
-require("colorscheme")
-
--- Plugins Config
--- require("config.telescope")
--- require("config.bufferline")
--- require("config.statusline")
--- require("config.autocompletion")
--- require("config.tabnine")
--- require("config.nvimtree")
--- require("config.commentary")
--- require("config.treesitter")
--- require("config.indent")
--- require("config.autopair")
--- require("config.comments")
--- require("config.project")
-
--- LSP Config
--- require("lsp.lsp-config")
--- require("lsp.lsp-python")
--- require("lsp.lsp-go")
--- require("lsp.lsp-docker")
--- require("lsp.lsp-lua")
--- require("lsp.lsp-php")
-
--- Linter
--- require("linter.test")
-
--- Format
--- require("formatter.test")
-
--- Git
--- require("git.gitsigns")
-
--- Debugger
--- require("debugger.debugger")
--- require("debugger.ui")
--- require("debugger.python")
--- require("debugger.go")
-                    </code>
-                </pre>
-			</section>
-
             <section title="YOUR TURN">
 				<div class="newTopicBar">
                 YOUR TURN 🔬
@@ -219,9 +189,13 @@ require("colorscheme")
             <section data-markdown title="HELP">
 				<div class="centerinside">
 				<textarea data-template>
-                    * [HILFE README](https://extranet.ordix.de/gitlab/lck/neovim_summercamp_workshop)
+                    * [HILFE README](https://github.com/LucaKuechler/Neovim-Workshop/blob/master/README.md)
 				</textarea>
 				</div>
+			</section>
+
+            <section title="How it looks">
+                <img src="./custom/meme.png"> 
 			</section>
 			<!-- END CUSTOM SLIDES  -->
 
@@ -267,6 +241,8 @@ require("colorscheme")
 			</div>
 		</div>
 	</section>
+
+    <sec
 
 	<section id="newEndpage" style="display: none;">
 		<div class="slide">
